@@ -21,27 +21,27 @@ private:
     switch (state_) {
     case 0:
       RCLCPP_INFO(this->get_logger(), "Move forward");
-      msg.data = {1, 1, 1, 1};
+      msg.data = {10, 10, 10, 10};
       break;
     case 1:
       RCLCPP_INFO(this->get_logger(), "Move backward");
-      msg.data = {-1, -1, -1, -1};
+      msg.data = {-10, -10, -10, -10};
       break;
     case 2:
       RCLCPP_INFO(this->get_logger(), "Move left");
-      msg.data = {-1, 1, -1, 1};
+      msg.data = {-10, 10, -10, 10};
       break;
     case 3:
       RCLCPP_INFO(this->get_logger(), "Move right");
-      msg.data = {1, -1, 1, -1};
+      msg.data = {10, -10, 10, -10};
       break;
     case 4:
       RCLCPP_INFO(this->get_logger(), "Turn clockwise");
-      msg.data = {1, -1, 1, -1};
+      msg.data = {10, -10, -10, 10};
       break;
     case 5:
       RCLCPP_INFO(this->get_logger(), "Turn counter-clockwise");
-      msg.data = {-1, 1, -1, 1};
+      msg.data = {-10, 10, 10, -10};
       break;
     default:
       RCLCPP_INFO(this->get_logger(), "Stop");
